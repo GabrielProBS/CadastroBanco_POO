@@ -99,9 +99,12 @@ public class Janela extends JFrame {
         public RadioButtonGroup() {
             JrbCorrente = new JRadioButton("Conta Corrente");
             JrbCorrente.setBounds(100, 150, 111, 20);
+            JrbCorrente.setMnemonic('C'); //Atalho alt+C
             JrbPoupanca = new JRadioButton("Conta Poupança");
             JrbPoupanca.setBounds(225, 150, 118, 20);
+            JrbPoupanca.setMnemonic('P');//Atalho alt+P
             btngroup = new ButtonGroup();
+
             btngroup.add(JrbCorrente);
             btngroup.add(JrbPoupanca);
             JrbCorrente.setSelected(true);
@@ -122,6 +125,7 @@ public class Janela extends JFrame {
             Jbatualizar = new JButton("Atualizar");
             Jbatualizar.setBounds(145, 190, 100, 23);
             Jbatualizar.setEnabled(false);
+            Jbatualizar.setMnemonic('A');
         }
     }
 
@@ -130,6 +134,7 @@ public class Janela extends JFrame {
         public Consultar() {
             Jbconsultar = new JButton("Consultar");
             Jbconsultar.setBounds(35, 190, 100, 23);
+            Jbconsultar.setMnemonic('S');
         }
     }
 
@@ -139,6 +144,7 @@ public class Janela extends JFrame {
             Jbfechar = new JButton("Fechar");
             Jbfechar.setBounds(255, 190, 100, 23);
             Jbfechar.addActionListener(e -> System.exit(0));
+            Jbfechar.setMnemonic('F');
         }
     }
     public Janela() {
